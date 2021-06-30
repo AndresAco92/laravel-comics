@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -13,6 +14,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@index')->name('home');
+
+Route::get('/characters', 'PageController@characters')->name('characters');
+
+Route::get('/comics', 'PageController@comics')->name('comics');
+
+Route::get('/movies', 'PageController@movies')->name('movies');
+
+Route::get('/tv', 'PageController@tv')->name('tv');
+
+Route::get('/games', 'PageController@games')->name('games');
+
+Route::get('/collectibles', 'PageController@collectibles')->name('collectibles');
+
+Route::get('/videos', 'PageController@videos')->name('videos');
+
+Route::get('/fans', 'PageController@fans')->name('fans');
+
+Route::get('/news', 'PageController@news')->name('news');
+
+Route::get('/shop', 'PageController@shop')->name('shop');
+
+
